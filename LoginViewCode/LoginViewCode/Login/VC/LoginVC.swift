@@ -6,21 +6,28 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginVC: UIViewController {
 
+    var auth: Auth?
     var loginScreen: LoginScreen?
+    var alert: Alert?
     
     // Utilizado na criação/referenciação de uma view
     override func loadView() {
         self.loginScreen = LoginScreen()
-        self.loginScreen?.delegate(delegate: self)
         self.view = self.loginScreen // Faz a view desta VC ser igual a view LoginScreen
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loginScreen?.configTextFieldDelegate(delegate: self)
+        self.loginScreen?.delegate(delegate: self)
+        self.auth = Auth.auth()
+        self.alert = Alert(controller: self)
+        let homeVC = HomeVC()
+        self.navigationController?.pushViewController(homeVC, animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,22 +43,36 @@ extension LoginVC: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        print("TextFieldDidEndEditing")
         self.loginScreen?.validateTextFields()
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        print("TextFieldDidBeginEditing")
+        
     }
 }
 
 extension LoginVC: LoginScreenProtocol {
     func actionLoginButton() {
-        print("Logando")
+        
+        let homeVC = HomeVC()
+        self.navigationController?.pushViewController(homeVC, animated: true)
+//        guard let login = self.loginScreen else { return }
+//
+//        self.auth?.signIn(withEmail: login.getEmail(), password: login.getPassword(), completion: { user, error in
+//
+//            if error != nil {
+//                self.alert?.getAlert(titulo: "Error", mensagem: error?.localizedDescription ?? "Erro ao fazer login")
+//            } else {
+//                if user == nil {
+//                    self.alert?.getAlert(titulo: "Error", mensagem: "Erro inesperado, tente novamente mais tarde")
+//                } else {
+//                    print("Logado com sucesso")
+//                }
+//            }
+//        })
     }
     
     func actionRegisterButton() {
-        print("Registrando")
         let vc: RegisterVC = RegisterVC()
         self.navigationController?.pushViewController(vc, animated: true)
     }

@@ -19,6 +19,8 @@ class LoginScreen: UIView {
     func delegate(delegate: LoginScreenProtocol?) {
         self.delegate = delegate
     }
+    
+    // MARK: UI Elements
 
     lazy var loginLabel: UILabel = {
         let label = UILabel()
@@ -89,6 +91,8 @@ class LoginScreen: UIView {
         return button
     }()
     
+    // MARK: Life Cycle
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.configBackground()
@@ -96,6 +100,12 @@ class LoginScreen: UIView {
         setUpContraints()
         configButtonEnable(false)
     }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: Private functions
     
     private func configBackground() {
         self.backgroundColor = UIColor(red: 24/255, green: 117/255, blue: 104/255, alpha: 1.0)
@@ -110,32 +120,6 @@ class LoginScreen: UIView {
         self.addSubview(registerButton)
     }
     
-    public func configTextFieldDelegate(delegate: UITextFieldDelegate) {
-        self.emailTextField.delegate = delegate
-        self.passwordTextField.delegate = delegate
-    }
-    
-    @objc private func tappedLoginButton() {
-        print("Botão de Login pressionado")
-        self.delegate?.actionLoginButton()
-    }
-    
-    @objc private func tappedRegisterButton() {
-        print("Botão de Login pressionado")
-        self.delegate?.actionRegisterButton()
-    }
-    
-    public func validateTextFields() {
-        guard let email: String = self.emailTextField.text else { return }
-        guard let password: String = self.passwordTextField.text else { return }
-        
-        if !email.isEmpty && !password.isEmpty {
-            self.configButtonEnable(true)
-        } else {
-            self.configButtonEnable(false)
-        }
-    }
-    
     private func configButtonEnable(_ enable: Bool) {
         if enable {
             self.loginButton.setTitleColor(.white, for: .normal)
@@ -146,10 +130,6 @@ class LoginScreen: UIView {
             self.loginButton.isEnabled = false
             self.loginButton.backgroundColor = .darkGray
         }
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     // equal to: basear em um determinado elemento
@@ -192,4 +172,43 @@ class LoginScreen: UIView {
         ])
     }
 
+    
+    // MARK: Buttons actions
+    
+    @objc private func tappedLoginButton() {
+        print("Botão de Login pressionado")
+        self.delegate?.actionLoginButton()
+    }
+    
+    @objc private func tappedRegisterButton() {
+        print("Botão de Login pressionado")
+        self.delegate?.actionRegisterButton()
+    }
+    
+    // MARK: Public functions
+    
+    public func configTextFieldDelegate(delegate: UITextFieldDelegate) {
+        self.emailTextField.delegate = delegate
+        self.passwordTextField.delegate = delegate
+    }
+    
+    public func validateTextFields() {
+        guard let email: String = self.emailTextField.text else { return }
+        guard let password: String = self.passwordTextField.text else { return }
+        
+        if !email.isEmpty && !password.isEmpty {
+            self.configButtonEnable(true)
+        } else {
+            self.configButtonEnable(false)
+        }
+    }
+    
+    public func getEmail() -> String {
+        return self.emailTextField.text?.lowercased() ?? ""
+    }
+    
+    public func getPassword() -> String {
+        return self.passwordTextField.text ?? ""
+    }
+    
 }

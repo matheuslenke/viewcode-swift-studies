@@ -19,6 +19,8 @@ class RegisterScreen: UIView {
     func delegate(_ delegate: RegisterScreenProtocol) {
         self.delegate = delegate
     }
+    
+    // MARK: UI Elements
 
     lazy var backButton: UIButton = {
         let button = UIButton()
@@ -79,6 +81,12 @@ class RegisterScreen: UIView {
         return button
     }()
     
+    // MARK: Life Cycle
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.configBackground()
@@ -86,6 +94,8 @@ class RegisterScreen: UIView {
         self.setUpConstraints()
         configButtonEnable(false)
     }
+    
+    // MARK: Private Functions
     
     private func configSuperView() {
         self.addSubview(self.backButton)
@@ -95,36 +105,8 @@ class RegisterScreen: UIView {
         self.addSubview(self.registerButton)
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     private func configBackground() {
         self.backgroundColor = UIColor(red: 24/255, green: 117/255, blue: 104/255, alpha: 1.0)
-    }
-    
-    func configTextFieldDelegate(delegate: UITextFieldDelegate) {
-        self.emailTextField.delegate = delegate
-        self.passwordTextField.delegate = delegate
-    }
-    
-    @objc private func tappedBackButton() {
-        self.delegate?.actionBackButton()
-    }
-    
-    @objc private func tappedRegisterButton() {
-        self.delegate?.actionRegisterButton()
-    }
-    
-    public func validateTextFields() {
-        guard let email: String = self.emailTextField.text else { return }
-        guard let password: String = self.passwordTextField.text else { return }
-        
-        if !email.isEmpty && !password.isEmpty {
-            self.configButtonEnable(true)
-        } else {
-            self.configButtonEnable(false)
-        }
     }
     
     private func configButtonEnable(_ enable: Bool) {
@@ -165,5 +147,41 @@ class RegisterScreen: UIView {
             self.registerButton.heightAnchor.constraint(equalTo: self.passwordTextField.heightAnchor)
         ])
     }
-
+    
+    func configTextFieldDelegate(delegate: UITextFieldDelegate) {
+        self.emailTextField.delegate = delegate
+        self.passwordTextField.delegate = delegate
+    }
+    
+    
+    // MARK: Public Functions
+    
+    public func validateTextFields() {
+        guard let email: String = self.emailTextField.text else { return }
+        guard let password: String = self.passwordTextField.text else { return }
+        
+        if !email.isEmpty && !password.isEmpty {
+            self.configButtonEnable(true)
+        } else {
+            self.configButtonEnable(false)
+        }
+    }
+    
+    public func getEmail() -> String {
+        return self.emailTextField.text ?? ""
+    }
+    
+    public func getPassword() -> String {
+        return self.passwordTextField.text ?? ""
+    }
+    
+    // MARK: Buttons Actions
+    
+    @objc private func tappedBackButton() {
+        self.delegate?.actionBackButton()
+    }
+    
+    @objc private func tappedRegisterButton() {
+        self.delegate?.actionRegisterButton()
+    }
 }

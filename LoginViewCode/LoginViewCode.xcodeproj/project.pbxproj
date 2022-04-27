@@ -16,6 +16,15 @@
 		F80F9597277A355E00081E88 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F9596277A355E00081E88 /* LoginScreen.swift */; };
 		F8600BC9279B36060016AC81 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8600BC8279B36060016AC81 /* RegisterVC.swift */; };
 		F8600BCB279B37A00016AC81 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8600BCA279B37A00016AC81 /* RegisterScreen.swift */; };
+		F8B737B82819B2C100829928 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B737B72819B2C100829928 /* HomeVC.swift */; };
+		F8B737BA2819B2EF00829928 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B737B92819B2EF00829928 /* HomeScreen.swift */; };
+		F8B737BF2819B89D00829928 /* UserDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B737BE2819B89D00829928 /* UserDetailTableViewCell.swift */; };
+		F8B737C22819E88900829928 /* DataUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B737C12819E88900829928 /* DataUser.swift */; };
+		F8B737C52819EBE100829928 /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B737C42819EBE100829928 /* UserDetailView.swift */; };
+		F8B737C92819F22300829928 /* SportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B737C82819F22300829928 /* SportTableViewCell.swift */; };
+		F8B737CB2819F2D100829928 /* SportTableViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B737CA2819F2D100829928 /* SportTableViewCellScreen.swift */; };
+		F8E88351281985B600105DB0 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E88350281985B600105DB0 /* Alert.swift */; };
+		F8E883532819A36C00105DB0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F8E883522819A36B00105DB0 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +41,15 @@
 		F80F9596277A355E00081E88 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		F8600BC8279B36060016AC81 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		F8600BCA279B37A00016AC81 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
+		F8B737B72819B2C100829928 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		F8B737B92819B2EF00829928 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		F8B737BE2819B89D00829928 /* UserDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailTableViewCell.swift; sourceTree = "<group>"; };
+		F8B737C12819E88900829928 /* DataUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUser.swift; sourceTree = "<group>"; };
+		F8B737C42819EBE100829928 /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
+		F8B737C82819F22300829928 /* SportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportTableViewCell.swift; sourceTree = "<group>"; };
+		F8B737CA2819F2D100829928 /* SportTableViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportTableViewCellScreen.swift; sourceTree = "<group>"; };
+		F8E88350281985B600105DB0 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		F8E883522819A36B00105DB0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +78,6 @@
 				F0B7070A5F963207AF7C014A /* Pods-LoginViewCode.debug.xcconfig */,
 				E9967E65D7D6711B6901D792 /* Pods-LoginViewCode.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -85,13 +102,12 @@
 		F80F957D277A1ABC00081E88 /* LoginViewCode */ = {
 			isa = PBXGroup;
 			children = (
-				F80F957E277A1ABC00081E88 /* AppDelegate.swift */,
-				F80F9580277A1ABC00081E88 /* SceneDelegate.swift */,
+				F8B737BC2819B81200829928 /* Application */,
+				F8B737B42819B28D00829928 /* Home */,
+				F8E8834F281985A200105DB0 /* Alert */,
 				F8600BC5279B35AE0016AC81 /* Register */,
 				F80F9592277A351D00081E88 /* Login */,
-				F80F9587277A1ABC00081E88 /* Assets.xcassets */,
-				F80F9589277A1ABC00081E88 /* LaunchScreen.storyboard */,
-				F80F958C277A1ABC00081E88 /* Info.plist */,
+				F8B737BB2819B80B00829928 /* Resources */,
 			);
 			path = LoginViewCode;
 			sourceTree = "<group>";
@@ -144,6 +160,112 @@
 				F8600BC8279B36060016AC81 /* RegisterVC.swift */,
 			);
 			path = VC;
+			sourceTree = "<group>";
+		};
+		F8B737B42819B28D00829928 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F8B737C02819E87A00829928 /* Model */,
+				F8B737BD2819B88700829928 /* Cell */,
+				F8B737B62819B29900829928 /* Screen */,
+				F8B737B52819B29400829928 /* VC */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F8B737B52819B29400829928 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				F8B737B72819B2C100829928 /* HomeVC.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		F8B737B62819B29900829928 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				F8B737B92819B2EF00829928 /* HomeScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		F8B737BB2819B80B00829928 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F80F9587277A1ABC00081E88 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F8B737BC2819B81200829928 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				F80F957E277A1ABC00081E88 /* AppDelegate.swift */,
+				F80F9580277A1ABC00081E88 /* SceneDelegate.swift */,
+				F8E883522819A36B00105DB0 /* GoogleService-Info.plist */,
+				F80F958C277A1ABC00081E88 /* Info.plist */,
+				F80F9589277A1ABC00081E88 /* LaunchScreen.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		F8B737BD2819B88700829928 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F8B737C72819F15400829928 /* SportTableViewCell */,
+				F8B737C62819F0E900829928 /* UserDetailTableViewCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F8B737C02819E87A00829928 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F8B737C12819E88900829928 /* DataUser.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F8B737C32819EBC900829928 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				F8B737C42819EBE100829928 /* UserDetailView.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		F8B737C62819F0E900829928 /* UserDetailTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F8B737C32819EBC900829928 /* CustomView */,
+				F8B737BE2819B89D00829928 /* UserDetailTableViewCell.swift */,
+			);
+			path = UserDetailTableViewCell;
+			sourceTree = "<group>";
+		};
+		F8B737C72819F15400829928 /* SportTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F8B737CC2819F2D600829928 /* CustomView */,
+				F8B737C82819F22300829928 /* SportTableViewCell.swift */,
+			);
+			path = SportTableViewCell;
+			sourceTree = "<group>";
+		};
+		F8B737CC2819F2D600829928 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				F8B737CA2819F2D100829928 /* SportTableViewCellScreen.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		F8E8834F281985A200105DB0 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				F8E88350281985B600105DB0 /* Alert.swift */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +330,7 @@
 			files = (
 				F80F958B277A1ABC00081E88 /* LaunchScreen.storyboard in Resources */,
 				F80F9588277A1ABC00081E88 /* Assets.xcassets in Resources */,
+				F8E883532819A36C00105DB0 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,11 +384,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8600BCB279B37A00016AC81 /* RegisterScreen.swift in Sources */,
+				F8B737B82819B2C100829928 /* HomeVC.swift in Sources */,
 				F80F9583277A1ABC00081E88 /* LoginVC.swift in Sources */,
 				F80F9597277A355E00081E88 /* LoginScreen.swift in Sources */,
+				F8B737C52819EBE100829928 /* UserDetailView.swift in Sources */,
+				F8B737C22819E88900829928 /* DataUser.swift in Sources */,
+				F8B737CB2819F2D100829928 /* SportTableViewCellScreen.swift in Sources */,
+				F8B737C92819F22300829928 /* SportTableViewCell.swift in Sources */,
 				F80F957F277A1ABC00081E88 /* AppDelegate.swift in Sources */,
+				F8B737BF2819B89D00829928 /* UserDetailTableViewCell.swift in Sources */,
+				F8B737BA2819B2EF00829928 /* HomeScreen.swift in Sources */,
 				F80F9581277A1ABC00081E88 /* SceneDelegate.swift in Sources */,
 				F8600BC9279B36060016AC81 /* RegisterVC.swift in Sources */,
+				F8E88351281985B600105DB0 /* Alert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +465,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Application/info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -389,6 +521,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Application/info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -409,12 +542,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 473AAT6556;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LoginViewCode/Info.plist;
+				INFOPLIST_FILE = LoginViewCode/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -438,12 +572,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 473AAT6556;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LoginViewCode/Info.plist;
+				INFOPLIST_FILE = LoginViewCode/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
