@@ -14,6 +14,8 @@ class SportTableViewCellScreen: UIView {
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.backgroundColor = .white
         collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.delaysContentTouches = false
+        collectionView.register(SportCollectionViewCell.self, forCellWithReuseIdentifier: SportCollectionViewCell.identifier)
         
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -25,11 +27,15 @@ class SportTableViewCellScreen: UIView {
         super.init(frame: frame)
         self.customAddSubview()
         self.configConstraints()
-        self.collectionView.backgroundColor = .red
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    public func configProtocolsCollectionView(delegate: UICollectionViewDelegate, dataSource: UICollectionViewDataSource) {
+        self.collectionView.delegate = delegate
+        self.collectionView.dataSource = dataSource
     }
     
     private func customAddSubview() {
