@@ -80,8 +80,8 @@ class HomeVC: UIViewController {
                     if let snapshot = querySnapshot {
                         for document in snapshot.documents {
                             let dados = document.data()
-                            if let idDestinatario = dados["idDestinatario"] as? String, let nome = dados["nome"] as? String, let ultimaMensagem = dados["ultimaMensagem"] as? String {
-                                
+                            if let idDestinatario = dados["idDestinatario"] as? String, let nome = dados["nomeUsuario"] as? String{
+                                let ultimaMensagem = dados["ultimaMensagem"] as? String
                                 self.conversationsList.append(Conversation(nome: nome, ultimaMensagem: ultimaMensagem, idDestinatario: idDestinatario))
                             }
                         }
@@ -154,26 +154,23 @@ extension HomeVC:UICollectionViewDelegate,UICollectionViewDataSource,UICollectio
                 })
                 
             }else{
-//                let VC:ChatViewController = ChatViewController()
-//                VC.contato = self.contactsList[indexPath.row]
-//                self.navigationController?.pushViewController(VC, animated: true)
+                let VC:ChatViewController = ChatViewController()
+                VC.contato = self.contactsList[indexPath.row]
+                self.navigationController?.pushViewController(VC, animated: true)
             }
         }else{
             
-//            let VC:ChatViewController = ChatViewController()
-//            let dados = self.listaConversas[indexPath.row]
-//            let contato:Contact = Contact(id: dados.idDestinatario ?? "", nome: dados.nome ?? "")
-//            VC.contato = contato
-//            self.navigationController?.pushViewController(VC, animated: true)
+            let VC:ChatViewController = ChatViewController()
+            let dados = self.conversationsList[indexPath.row]
+            let contato:Contact = Contact(id: dados.idDestinatario , nome: dados.nome )
+            VC.contato = contato
+            self.navigationController?.pushViewController(VC, animated: true)
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: 100)
     }
-    
-    
- 
 }
 
 

@@ -67,7 +67,7 @@ class MessageDetailCollectionViewCell: UICollectionViewCell {
     func setUserNameAttributedText(_ conversation:Conversation){
         let attributedText = NSMutableAttributedString(string:"\(conversation.nome )" , attributes:[NSAttributedString.Key.font: UIFont(name:CustomFont.poppinsMedium, size: 16) ?? UIFont(),NSAttributedString.Key.foregroundColor: UIColor.darkGray])
         
-        attributedText.append(NSAttributedString(string: "\n\(conversation.ultimaMensagem )" , attributes:[NSAttributedString.Key.font: UIFont(name:CustomFont.poppinsMedium, size: 14) ?? UIFont(), NSAttributedString.Key.foregroundColor: UIColor.lightGray]))
+        attributedText.append(NSAttributedString(string: "\n\(conversation.ultimaMensagem ?? "")" , attributes:[NSAttributedString.Key.font: UIFont(name:CustomFont.poppinsMedium, size: 14) ?? UIFont(), NSAttributedString.Key.foregroundColor: UIColor.lightGray]))
         
         self.userName.attributedText = attributedText
     }

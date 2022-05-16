@@ -39,6 +39,8 @@
 		F8858C032825E555002F4D70 /* MessageAllModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8858C022825E555002F4D70 /* MessageAllModel.swift */; };
 		F8858C062825E720002F4D70 /* MessageLastCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8858C052825E720002F4D70 /* MessageLastCollectionViewCell.swift */; };
 		F8858C082825EA01002F4D70 /* MessageDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8858C072825EA01002F4D70 /* MessageDetailCollectionViewCell.swift */; };
+		F892314C28327CFA00EC595D /* IncomingTextMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F892314B28327CFA00EC595D /* IncomingTextMessageTableViewCell.swift */; };
+		F892314E2832874B00EC595D /* OutgoingTextMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F892314D2832874B00EC595D /* OutgoingTextMessageTableViewCell.swift */; };
 		F8AAECFC282A780D00EA6342 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AAECFB282A780D00EA6342 /* ChatViewController.swift */; };
 		F8AAECFF282A782A00EA6342 /* ChatScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AAECFE282A782A00EA6342 /* ChatScreen.swift */; };
 		F8AAED02282A7D5800EA6342 /* ChatNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AAED01282A7D5800EA6342 /* ChatNavigationView.swift */; };
@@ -104,6 +106,8 @@
 		F8858C022825E555002F4D70 /* MessageAllModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageAllModel.swift; sourceTree = "<group>"; };
 		F8858C052825E720002F4D70 /* MessageLastCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageLastCollectionViewCell.swift; sourceTree = "<group>"; };
 		F8858C072825EA01002F4D70 /* MessageDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		F892314B28327CFA00EC595D /* IncomingTextMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingTextMessageTableViewCell.swift; sourceTree = "<group>"; };
+		F892314D2832874B00EC595D /* OutgoingTextMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutgoingTextMessageTableViewCell.swift; sourceTree = "<group>"; };
 		F8AAECFB282A780D00EA6342 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		F8AAECFE282A782A00EA6342 /* ChatScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreen.swift; sourceTree = "<group>"; };
 		F8AAED01282A7D5800EA6342 /* ChatNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatNavigationView.swift; sourceTree = "<group>"; };
@@ -378,9 +382,19 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		F892314A28327CA800EC595D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F892314B28327CFA00EC595D /* IncomingTextMessageTableViewCell.swift */,
+				F892314D2832874B00EC595D /* OutgoingTextMessageTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		F8AAECFA282A77F900EA6342 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				F892314A28327CA800EC595D /* Cell */,
 				F8AAED00282A7D3B00EA6342 /* ChatNavigationView */,
 				F8AAECFD282A781800EA6342 /* Screen */,
 				F8AAECFB282A780D00EA6342 /* ChatViewController.swift */,
@@ -650,6 +664,7 @@
 				F823A97728205CC200C20416 /* RegisterScreen.swift in Sources */,
 				F824958328295EF3000F5DF7 /* Constants.swift in Sources */,
 				F823A97628205CC200C20416 /* RegisterVC.swift in Sources */,
+				F892314C28327CFA00EC595D /* IncomingTextMessageTableViewCell.swift in Sources */,
 				F81E25932825AD020004430C /* Extension+UIView.swift in Sources */,
 				F81E25912825AD020004430C /* Custom.swift in Sources */,
 				F856C66F28203E69009E41C6 /* AppDelegate.swift in Sources */,
@@ -664,6 +679,7 @@
 				F8AAECFF282A782A00EA6342 /* ChatScreen.swift in Sources */,
 				F81E25922825AD020004430C /* Extension+Button.swift in Sources */,
 				F81E259B2825C3810004430C /* HomeVC.swift in Sources */,
+				F892314E2832874B00EC595D /* OutgoingTextMessageTableViewCell.swift in Sources */,
 				F823A97928205CC200C20416 /* LoginScreen.swift in Sources */,
 				F8858C062825E720002F4D70 /* MessageLastCollectionViewCell.swift in Sources */,
 				F823A97A28205CC200C20416 /* Alert.swift in Sources */,

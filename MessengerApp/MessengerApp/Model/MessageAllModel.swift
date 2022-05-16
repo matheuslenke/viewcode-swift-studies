@@ -14,7 +14,7 @@ struct Message {
 
 struct Conversation {
     let nome: String
-    let ultimaMensagem: String
+    let ultimaMensagem: String?
     let idDestinatario: String
 }
 
